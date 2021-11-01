@@ -51,11 +51,10 @@ public class Main {
         int sum = 0;
         int count = 0;
 
-        boolean flag = true;
-        while (flag) {
-            int number = inputInt("Enter an integer: ");
-            if (number <= 0)
-                flag = false;
+        while (true) {
+            Integer number = inputInt("Enter an integer: ");
+            if (number <= 0 || number == null)
+                break;
             else {
                 numbers.addItem(number);
                 sum += number;
@@ -67,7 +66,7 @@ public class Main {
         while (numbers.hasNext()) {
             int one_number = numbers.getNext();
             if (Math.abs((average - one_number) / ((average + one_number) / 2)) > 0.5)
-                System.out.println(one_number);
+                System.out.print(one_number + " ");
         }
 
     }
