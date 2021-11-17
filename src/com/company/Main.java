@@ -65,7 +65,7 @@ public class Main {
 
         while (numbers.hasNext()) {
             int one_number = numbers.getNext();
-            if (Math.abs((average - one_number) / ((average + one_number) / 2)) > 0.5)
+            if (Math.abs(one_number - average) / average > 0.5)
                 System.out.print(one_number + " ");
         }
 
